@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEST-CAPS | Empresa de gorras</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+  color:#333;
+}
+
+header{
+  background:black;
+  color:white;
+  padding:25px;
+  text-align:center;
+}
+header h1{
+  margin:0;
+  font-size:40px;
+}
+
+/* NAVBAR */
+.navbar{
+  background:#333;
+}
+.menu{
+  list-style:none;
+  display:flex;
+  justify-content:center;
+}
+.menu li a{
+  display:block;
+  color:white;
+  padding:14px 20px;
+  text-decoration:none;
+}
+.menu li a:hover{
+  background:#555;
+  color:#ffe699;
+}
+
+.icon{
+  display:none;
+  font-size:24px;
+  color:white;
+  cursor:pointer;
+  padding:10px;
+  text-align:center;
+}
+
+/* CONTENIDO */
+.container{
+  width:90%;
+  max-width:1000px;
+  margin:auto;
+  margin-top:20px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  margin-bottom:20px;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  text-align:center;
+}
+
+h2{
+  color:#0f2027;
+}
+
+/* 🔥 IMÁGENES ARREGLADAS */
+.img-fluida{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+/* 🔥 VIDEO IGUALADO */
+video{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+/* FLEX */
+.flex{
+  display:flex;
+  gap:20px;
+  margin-top:15px;
+  flex-wrap:wrap;
+}
+
+.flex div{
+  flex:1 1 calc(33% - 20px);
+  background:#f4f4f4;
+  padding:15px;
+  border-radius:8px;
+  text-align:center;
+  transition:0.3s;
+}
+
+/* EFECTO HOVER */
+.flex div:hover{
+  transform:scale(1.05);
+}
+
+/* NUEVO: PRECIOS */
+.precio{
+  color:#27ae60;
+  font-weight:bold;
+  font-size:18px;
+  margin-top:5px;
+}
+
+/* NUEVO: BOTÓN */
+.btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 15px;
+  background:#203a43;
+  color:white;
+  border-radius:20px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#0f2027;
+}
+
+/* FOOTER */
+footer{
+  background:black;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+  .flex{
+    flex-direction:column;
+  }
+}
+
+@media(max-width:600px){
+  .menu{
+    display:none;
+    flex-direction:column;
+  }
+  .menu.active{
+    display:flex;
+  }
+  .icon{
+    display:block;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="D:\huidobro\602\DISEÑO WEB\Evaluacion Diseño WEB\Práctica 6 Sitio web adaptable a dispositivos móviles\img\logo.jpg.jpeg" style="width:120px; margin-bottom:10px;">
+<h1>Gorras BEST-CAPS</h1>
+<p>- Más que una gorra, tu estilo</p>
+</header>
+
+<nav class="navbar">
+<span class="icon" onclick="toggleMenu()">☰</span>
+<ul class="menu" id="menu">
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#productos">Productos</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+</nav>
+
+<div class="container">
+
+<div class="card" id="inicio">
+<h2>Misión</h2>
+<p>Ofrecer un producto cómodo, llamativo y de calidad.</p>
+
+<h2>Visión</h2>
+<p>Expandir nuestros productos a diferentes regiones.</p>
+</div>
+
+<div class="card">
+<h2>Sobre Nosotros</h2>
+<p>Empresa enfocada en gorras urbanas modernas.</p>
+</div>
+
+<div class="card" id="productos">
+<h2>Catálogo</h2>
+
+<p style="margin-bottom:15px; font-weight:bold; color:#203a43;">
+🔥 Envíos a todo México | Calidad premium
+</p>
+
+<div class="flex">
+
+<div>
+<img src="D:\huidobro\602\DISEÑO WEB\Evaluacion Diseño WEB\FOTOS\imagen1.png.jpeg" class="img-fluida">
+<p>Modelo 1</p>
+<p class="precio">$800 MXN</p>
+<a href="#" class="btn">Comprar</a>
+</div>
+
+<div>
+<img src="D:\huidobro\602\DISEÑO WEB\Evaluacion Diseño WEB\FOTOS\imagen2.png.jpeg" class="img-fluida">
+<p>Modelo 2</p>
+<p class="precio">$800 MXN</p>
+<a href="#" class="btn">Comprar</a>
+</div>
+
+<div>
+<img src="D:\huidobro\602\DISEÑO WEB\Evaluacion Diseño WEB\FOTOS\imagen3.png.jpeg" class="img-fluida">
+<p>Modelo 3</p>
+<p class="precio">$1000 MXN</p>
+<a href="#" class="btn">Comprar</a>
+</div>
+
+<div>
+<img src="D:\huidobro\602\DISEÑO WEB\Evaluacion Diseño WEB\FOTOS\imagen4.png.jpeg" class="img-fluida">
+<p>Modelo 4</p>
+<p class="precio">$800 MXN</p>
+<a href="#" class="btn">Comprar</a>
+</div>
+
+<div>
+<img src="D:\huidobro\602\DISEÑO WEB\Evaluacion Diseño WEB\FOTOS\imagen5.png.jpeg" class="img-fluida">
+<p>Modelo 5</p>
+<p class="precio">$800 MXN</p>
+<a href="#" class="btn">Comprar</a>
+</div>
+
+<div>
+<img src="D:\huidobro\602\DISEÑO WEB\Evaluacion Diseño WEB\FOTOS\imagen6.png.jpeg" class="img-fluida">
+<p>Modelo 6</p>
+<p class="precio">$1000 MXN</p>
+<a href="#" class="btn">Comprar</a>
+</div>
+
+<div>
+<video controls>
+<source src="D:\huidobro\602\DISEÑO WEB\Evaluacion Diseño WEB\VIDEO\VIDEO.mp4">
+</video>
+<p>Video Promocional</p>
+</div>
+
+<div>
+<img src="D:\huidobro\602\DISEÑO WEB\Evaluacion Diseño WEB\FOTOS\imagen7.png.jpeg" class="img-fluida">
+<p>Modelo 7</p>
+<p class="precio">$1000 MXN</p>
+<a href="#" class="btn">Comprar</a>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+<h2>Proceso</h2>
+<div class="flex">
+<div><h3>Diseño</h3><p>Creación en 3D</p></div>
+<div><h3>Producción</h3><p>Maquinaria especializada</p></div>
+<div><h3>Tiempo</h3><p>Varias horas</p></div>
+</div>
+</div>
+
+<div class="card" id="contacto">
+<h2>Contacto</h2>
+<p>📞 (670) 067-6767</p>
+<p>📧 contacto@BestCaps.com</p>
+<p>📍 Estado de México</p>
+</div>
+
+</div>
+
+<footer>
+<p>BEST-CAPS © 2026</p>
+</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
